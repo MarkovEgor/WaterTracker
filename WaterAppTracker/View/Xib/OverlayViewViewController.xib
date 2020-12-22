@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayViewViewController" customModule="WaterAppTracker" customModuleProvider="target">
+            <connections>
+                <outlet property="imageUser" destination="DIU-Ny-hQg" id="aAP-V1-yUb"/>
+                <outlet property="nameTF" destination="OZw-aK-s8U" id="skL-k6-ARP"/>
+                <outlet property="saveButton" destination="iZn-xk-AsY" id="XSn-8v-OGs"/>
+                <outlet property="saveUserInfo" destination="iZn-xk-AsY" id="Pcs-x3-FaI"/>
+                <outlet property="surnameTF" destination="rv4-IJ-3sU" id="xZL-9J-eG9"/>
+                <outlet property="topView" destination="Pjl-3Y-lvx" id="Bgo-kR-niE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-3Y-lvx">
+                    <rect key="frame" x="182" y="54" width="50" height="6"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="TYW-6e-v2k"/>
+                        <constraint firstAttribute="height" constant="6" id="gLd-La-AoF"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DIU-Ny-hQg">
+                    <rect key="frame" x="147" y="110" width="120" height="120"/>
+                    <color key="backgroundColor" name="Back blue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="8qd-KC-Mgp"/>
+                        <constraint firstAttribute="height" constant="120" id="iLp-BM-5rV"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZn-xk-AsY">
+                    <rect key="frame" x="360" y="74" width="34" height="30"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" red="0.45409679409999998" green="0.38933429120000002" blue="0.85099709030000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saveTapedUserInfo:" destination="-1" eventType="touchUpInside" id="FVn-c6-aPb"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BBM-Va-n8q">
+                    <rect key="frame" x="60" y="250" width="334" height="62.5"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZw-aK-s8U">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="19.5"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Surname" clearsOnBeginEditing="YES" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rv4-IJ-3sU">
+                            <rect key="frame" x="0.0" y="39.5" width="334" height="23"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iZn-xk-AsY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="47r-5n-WQO"/>
+                <constraint firstItem="DIU-Ny-hQg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ex9-6I-Z7e"/>
+                <constraint firstItem="BBM-Va-n8q" firstAttribute="top" secondItem="DIU-Ny-hQg" secondAttribute="bottom" constant="20" id="Khf-DM-lqX"/>
+                <constraint firstItem="DIU-Ny-hQg" firstAttribute="top" secondItem="Pjl-3Y-lvx" secondAttribute="bottom" constant="50" id="Ns6-Um-IP9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iZn-xk-AsY" secondAttribute="trailing" constant="20" id="Q7n-Ti-ICx"/>
+                <constraint firstItem="Pjl-3Y-lvx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h09-Yb-BZm"/>
+                <constraint firstItem="Pjl-3Y-lvx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="iXz-fp-yYC"/>
+                <constraint firstItem="BBM-Va-n8q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="60" id="qbL-aI-o7E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BBM-Va-n8q" secondAttribute="trailing" constant="20" id="sz9-P8-sQ7"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="50.892857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Back blue">
+            <color red="0.17647058823529413" green="0.28235294117647058" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
