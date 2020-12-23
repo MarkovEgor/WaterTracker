@@ -24,7 +24,7 @@ class DAODrink: CRUDDrink {
     
     static var current = DAODrink()
     private init() {
-        drinks = getALL()
+       getALL()
     }
     
     //MARK: - Func
@@ -34,7 +34,7 @@ class DAODrink: CRUDDrink {
     }
     
     // получение всех объектов
-    func getALL() -> [Drink] {
+    @discardableResult  func getALL() -> [Drink] {
         let fetchRequest: NSFetchRequest<Drink> = Drink.fetchRequest() // объект-контейнер для выборки данных
         
         do {

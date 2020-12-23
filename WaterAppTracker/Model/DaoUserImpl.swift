@@ -24,9 +24,9 @@ class DaoUserImpl: CRUDUser {
     
     var users: [User]!
     static var current = DaoUserImpl()
+   
     private init() {
-       _ = getALL()
-        
+       getALL()
     }
     
     
@@ -38,7 +38,7 @@ class DaoUserImpl: CRUDUser {
     }
     
     // получение всех объектов
-    func getALL() -> [User] {
+    @discardableResult func getALL() -> [User] {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest() // объект-контейнер для выборки данных
 
         do {
@@ -58,7 +58,6 @@ class DaoUserImpl: CRUDUser {
     }
     
     func addUpdate(_ user: User) {
-        
         // если объект не было то добавляем, если  был но изменили сохраняем
         if !users.contains(user) {
             users.append(user)

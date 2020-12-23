@@ -140,7 +140,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qWx-E6-b8f">
                                 <rect key="frame" x="20" y="20" width="374" height="788"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="tPl-e1-AUN">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="tPl-e1-AUN">
                                     <size key="itemSize" width="374" height="728"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -174,7 +174,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HUg-Lp-dT3">
-                                                            <rect key="frame" x="51.5" y="442" width="251" height="32"/>
+                                                            <rect key="frame" x="51.5" y="442" width="251" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="xrL-po-hSk"/>
+                                                            </constraints>
                                                             <segments>
                                                                 <segment title="100 ml"/>
                                                                 <segment title="150 ml"/>
@@ -190,6 +193,7 @@
                                                             <rect key="frame" x="117" y="678" width="120" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Qic-WO-2rr"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="RyW-S1-3YC"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -205,14 +209,13 @@
                                                     <constraints>
                                                         <constraint firstItem="VnQ-i8-Sts" firstAttribute="centerX" secondItem="tEo-mP-tGE" secondAttribute="centerX" id="8KM-Kw-qiO"/>
                                                         <constraint firstItem="JgO-R5-c01" firstAttribute="centerX" secondItem="tEo-mP-tGE" secondAttribute="centerX" id="9fu-a8-r1V"/>
-                                                        <constraint firstItem="JgO-R5-c01" firstAttribute="top" secondItem="HUg-Lp-dT3" secondAttribute="bottom" constant="205" id="CCp-rH-Xb5"/>
+                                                        <constraint firstItem="JgO-R5-c01" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HUg-Lp-dT3" secondAttribute="bottom" constant="150" id="CCp-rH-Xb5"/>
                                                         <constraint firstItem="Gng-9H-288" firstAttribute="top" secondItem="VnQ-i8-Sts" secondAttribute="bottom" constant="5" id="EiB-Fv-Vz6"/>
                                                         <constraint firstItem="Gng-9H-288" firstAttribute="centerX" secondItem="tEo-mP-tGE" secondAttribute="centerX" id="UaH-9g-o05"/>
                                                         <constraint firstItem="VnQ-i8-Sts" firstAttribute="top" secondItem="tEo-mP-tGE" secondAttribute="top" constant="34" id="UwA-U2-yLF"/>
                                                         <constraint firstItem="HUg-Lp-dT3" firstAttribute="centerX" secondItem="tEo-mP-tGE" secondAttribute="centerX" id="fSZ-sS-YOG"/>
                                                         <constraint firstItem="HUg-Lp-dT3" firstAttribute="top" secondItem="Gng-9H-288" secondAttribute="bottom" constant="40" id="fgk-dH-kG4"/>
                                                         <constraint firstAttribute="bottom" secondItem="JgO-R5-c01" secondAttribute="bottom" constant="20" id="rhv-Mc-Lzo"/>
-                                                        <constraint firstAttribute="width" constant="350" id="wec-Nz-dD6"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

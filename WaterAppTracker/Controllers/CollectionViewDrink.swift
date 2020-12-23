@@ -146,7 +146,6 @@ class CollectionViewDrink: UIViewController, UICollectionViewDelegate, UICollect
      func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         segmentDrinkMl(0)
         let x = targetContentOffset.pointee.x
-        
         pageControll.currentPage = Int(x / collectionView.frame.width)
         
     }
@@ -155,35 +154,23 @@ class CollectionViewDrink: UIViewController, UICollectionViewDelegate, UICollect
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height)
+        let width = collectionView.frame.width - 10
+        
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 20)
+        return UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 10)
     }
-    
 
-    
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//        
-//        coordinator.animate(alongsideTransition: { (_) in
-//            self.collectionView.collectionViewLayout.invalidateLayout()
-//            if self.pageControll.currentPage == 0 {
-//                self.collectionView?.contentOffset = .zero
-//            }else{
-//                let index = IndexPath(item: self.pageControll.currentPage, section: 0)
-//                self.collectionView?.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-//                
-//            }
-//        }) { (_) in
-//            
-//        }
-//        
-//    }
     
     
     
