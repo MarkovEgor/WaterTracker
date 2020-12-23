@@ -20,9 +20,11 @@ class DaoUserImpl: CRUDUser {
         return ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
     
+    
+    
     //Sington
     
-    var users: [User]!
+    var users: [User] = []
     static var current = DaoUserImpl()
    
     private init() {

@@ -20,7 +20,7 @@ class DAODrink: CRUDDrink {
         return ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
     
-    var drinks: [Drink]!
+    var drinks: [Drink] = []
     
     static var current = DAODrink()
     private init() {
@@ -41,6 +41,7 @@ class DAODrink: CRUDDrink {
             drinks = try context.fetch(fetchRequest) // выполнение выборки (select) и присваивание в переменную items, которая хранит список справочных значений для отображения
         } catch {
             fatalError("Fetching Failed")
+         
         }
         
         return drinks
@@ -55,4 +56,10 @@ class DAODrink: CRUDDrink {
     func add(_ drink: Drink) {
         save()
     }
+
 }
+
+
+
+   
+

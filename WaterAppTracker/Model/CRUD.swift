@@ -12,7 +12,7 @@ import CoreData
 //MARK: - Protocol
 protocol CRUDDrink {
     
-    var drinks: [Drink]! {get set} // хранит текущие данные из БД
+    var drinks: [Drink]  {get set} // хранит текущие данные из БД
     
     func getALL() -> [Drink] // получение всех объектов
     
@@ -24,7 +24,7 @@ protocol CRUDDrink {
 
 protocol CRUDUser {
     
-    var users: [User]! {get set} // хранит текущие данные из БД
+    var users: [User] {get set} // хранит текущие данные из БД
     
     func getALL() -> [User] // получение всех объектов
     
@@ -32,3 +32,6 @@ protocol CRUDUser {
     
     func addUpdate(_ user: User) // добаляет или обновляет текущий объект
 }
+
+
+
